@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div>
+        <h2 style="color: rgb(0, 0, 0);">Add Book</h2>
+        <form id="bookForm">
+            <div class="data">
+                <label for="title">Title:</label>
+                <input type="text" id="bookTitle" name="bookTitle" required>
+            </div>
+            <div class="data">
+                <label for="author">Author:</label>
+                <input type="text" id="bookAuthor" name="bookAuthor" required>
+            </div>
+            <div class="data">
+                <label for="description">Description:</label>
+                <textarea id="bookDescription" name="bookDescription" required></textarea>
+            </div>
+            <div class="data">
+                <label for="language">Language:</label>
+                <input type="text" id="bookLanguage" name="bookLanguage" required>
+            </div>
+            <div class="data">
+                <label for="genre">Genre:</label>
+                <input type="text" id="bookGenre" name="bookGenre" required>
+            </div>
+            <div class="data">
+                <label for="price">Price:</label>
+                <input type="number" id="bookPrice" name="bookPrice" required>
+            </div>
+            <div class="data">
+                <label for="publisher">Publisher:</label>
+                <input type="text" id="bookPublisher" name="bookPublisher" required>
+            </div>
+            <div class="data">
+                <button type="submit">Add Book</button>
+            </div>
+        </form>
+    </div>
+    <script src="main.js"></script>
+    <script src="ajax.js"></script>
+</body>
+</html>

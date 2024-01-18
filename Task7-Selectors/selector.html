@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Selectors</title> 
+</head> 
+<body> 
+    <h4 id="demoId">ID 1.</h4> 
+    <p name="demoName">First element.</p> 
+    <h5 name="demoName">Second element.</h5> 
+    <p class="demoClass">Third element.</p> 
+    <h4 class="demoClass">Fourth element.</h4> 
+ 
+    <script>         
+        var idelement = document.getElementById("demoId");         
+        var tagelements = document.getElementsByTagName("p");         
+        var nameelements = document.getElementsByName("demoName");         
+        var classelements = document.getElementsByClassName("demoClass"); 
+ 
+        console.log(idelement); 
+        console.log(tagelements);         
+        console.log(nameelements);         
+        console.log(classelements); 
+    </script> 
+</body> 
+</html> 
+ 

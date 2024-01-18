@@ -1,0 +1,87 @@
+
+h2,h3,h5{
+    text-align-last: center;
+  }
+  form {
+    position: relative;
+    width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+  
+  form .text {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form .data {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  form .data label {
+    font-weight: bold;
+    margin-right: 20px;
+    min-width: 120px; /* Set a minimum width for the label */
+  }
+  
+  form .data input {
+    flex: 1; /* Let the input field take the remaining width */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  /* Add margin to separate the data elements */
+  form .data:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  
+  form .btn {
+    text-align: center;
+  }
+  
+  form .btn button {
+    padding: 10px 20px;
+    background-color: gray;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  form .btn button:hover {
+    background-color: rgb(185, 184, 184);
+    transform: scale(1.1);
+  }
+  
+  form .signup-link {
+    text-align: center;
+    margin-top: 8px;
+  }
+  
+  form .signup-link a {
+    color: grey;
+    text-decoration: none;
+  }
+  
+  form .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  form .text-danger {
+    color: black;
+    background-color: white;
+    display: block;
+    margin-top: 3px;
+  }
+  
