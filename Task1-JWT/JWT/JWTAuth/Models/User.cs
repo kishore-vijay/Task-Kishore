@@ -7,7 +7,7 @@ namespace JWTAuth.Models
         [Key]
         public string UserName { get; set; } = "";
         public string Name { get; set; } = "";
-        public string Role { get; set; } = "Everyone";
+        public string Role { get; set; } = "";
         public bool IsActive { get; set; } = false;
         public string Token { get; set; } = "";        
         public string Password { get; set; } = "";

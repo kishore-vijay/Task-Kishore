@@ -1,6 +1,6 @@
 using JWTAuth.Business;
-using JWTAuth.Business.AuthService.Implementation;
-using JWTAuth.Business.AuthService.Interface;
+using JWTAuth.Services;
+using JWTAuth.Interface;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -13,15 +13,15 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddControllers();
-builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IAuthService, AuthenticationService>();
 builder.Services.AddAuthentication(opt =>
 {
     opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
 .AddJwtBearer(opt =>
-{   // for development only
-    opt.RequireHttpsMetadata = false;
+{   
+    
     opt.SaveToken = true;
     opt.TokenValidationParameters = new TokenValidationParameters
     {
@@ -33,6 +33,12 @@ builder.Services.AddAuthentication(opt =>
         ValidAudience = builder.Configuration["JWT:Audience"]
     };
 });
+
+
+
+
+
+
 builder.Services.AddHealthChecks();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c => {
